@@ -61,6 +61,7 @@ public class Data{
 
     }
 
+    // hash approach
     static void hashSumCheck(int[] intArray, int sum) { //O(n) but uses O(n) extra memory (space)
 
         Map<Integer, Integer> map = new HashMap<>();
@@ -97,17 +98,17 @@ public class Data{
         Data.bruteSumCheck(numbers, 33);
         Data.sortSumCheck(numbers, 8);
 
-        System.out.println("Using sorting:"); 
+        // System.out.println("Using sorting:"); 
 
-        Data.sortSumCheck(numbers, 20);
-        Data.sortSumCheck(numbers, 33);
-        Data.sortSumCheck(numbers, 8);
+        // Data.sortSumCheck(numbers, 20);
+        // Data.sortSumCheck(numbers, 33);
+        // Data.sortSumCheck(numbers, 8);
 
-        System.out.println("Using a HashMap:"); 
+        // System.out.println("Using a HashMap:"); 
 
-        Data.hashSumCheck(numbers, 20);
-        Data.hashSumCheck(numbers, 33);
-        Data.hashSumCheck(numbers, 8);
+        // Data.hashSumCheck(numbers, 20);
+        // Data.hashSumCheck(numbers, 33);
+        // Data.hashSumCheck(numbers, 8);
 
         
 
