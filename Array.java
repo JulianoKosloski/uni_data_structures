@@ -5,13 +5,33 @@ public class Array {
     // https://www.geeksforgeeks.org/arrays-in-java/
 
     // Shortest path from start to end of a maze (2D matrix of 0, 1, where 1 means an open path)
-    static void shortestPath(int[][] maze, int startX, int startY, int endX, int endY) {
+
+    private static boolean isOpen(int[][] matrix, int x, int y) {
+        return (matrix[x][y] == 1) ? true : false;  // returns true if the coords correspond to an open path (1)
+    }
+
+    private static boolean isNewStep(boolean[][] visited, int x, int y) {
+        return (visited[x][y] == true) ? false : true; // returns true if the coords haven't been used in the current iteration
+    }
+
+    static int findShortestPath(int[][] maze, int startRow, int startCol, int endRow, int endCol) {
 
         System.out.println("IT'S IMPOSSIBLE...just kidding");
-        
+        int pathSteps = 0;
+        int stepCounter = 0;
+        int x = startRow, y = startCol;
 
+        boolean[][] visited = new boolean[maze.length][maze[0].length];
 
+        if (isOpen(maze, x, y) && isNewStep(visited, x, y)) {
+            //move
+            stepCounter++;
+        }
 
+        // maybe a do while for the first assignment, so I don't have to store a big number there
+        pathSteps = (stepCounter < pathSteps) ? stepCounter : pathSteps; // assign a new value if the current path is shorter than the old one;
+
+        return pathSteps;
     }
 
     public static void main(String[] args) {
@@ -35,7 +55,9 @@ public class Array {
             }
         }
 
-        int[][] maze = {
+        System.out.println("-------------MAZE---------------");
+
+        int[][] maze = { //expected shortpath = 13
             {1,0,1,0,0,0,1,0,1,0},
             {0,1,1,0,0,1,1,0,1,1}, 
             {1,1,0,1,0,1,0,1,0,1},
@@ -46,5 +68,7 @@ public class Array {
             {0,1,0,0,0,0,1,0,1,0}
         };
 
+        int steps = findShortestPath(maze, 7, 6, 0, 2);
+        System.out.println(steps);
     }
 }
