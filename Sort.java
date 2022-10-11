@@ -8,8 +8,7 @@ public class Sort {
     // https://www.techiedelight.com/hybrid-quicksort/
     // https://www.techiedelight.com/external-merge-sort/
 
-    // https://www.geeksforgeeks.org/sorting-algorithms/?ref=shm
-    // https://www.geeksforgeeks.org/divide-and-conquer/?ref=shm
+    // https://www.geeksforgeeks.org/sorting-in-java/
 
     // https://java-programming.mooc.fi/part-7/2-algorithms
     // https://www.programiz.com/java-programming/algorithms
