@@ -61,7 +61,7 @@ public class Data{
 
     }
 
-    static void hashSumCheck(int[] intArray, int sum) { //O(n) but uses more memory (space)
+    static void hashSumCheck(int[] intArray, int sum) { //O(n) but uses O(n) extra memory (space)
 
         Map<Integer, Integer> map = new HashMap<>();
         int sumCounter = 0;
@@ -90,7 +90,6 @@ public class Data{
     public static void main(String[] args) {
 
         int[] numbers = {3, 7, 14, 28, 2, 31, 5};
-
 
         System.out.println("Using brute force:"); 
 
