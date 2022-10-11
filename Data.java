@@ -1,5 +1,6 @@
 import java.util.Arrays;
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class Data{
 
@@ -15,7 +16,7 @@ public class Data{
         for (int i = 0; i<(intArray.length -1); i++) {
             for (int j = i+1; j<intArray.length; j++) {
                 if (intArray[i] + intArray[j] == sum) {
-                    System.out.println("Found the sum. Values: " + intArray[i] + " and " + intArray[j]);
+                    System.out.println("Found the sum for value " + sum + ". Values: " + intArray[i] + " and " + intArray[j]);
                     sumCounter++;
                 }
             }
@@ -29,21 +30,62 @@ public class Data{
     }
 
     // sorting approach 
-    static void sortSumCheck(int[] intArray, int sum) { // O(n.log(n))
+    static void sortSumCheck(int[] intArray, int sum) { // O(n.log(n)) --> time complexity of the sorting algorithm
 
+        Arrays.sort(intArray);
 
+        int sumCounter = 0;
 
+        int end = intArray.length - 1;
+        int start = 0;
 
+        while (start < end) {
+
+            int currentSum = intArray[start] + intArray[end];
+            if (currentSum == sum) {
+                System.out.println("Found the sum for value " + sum + ". Values: " + intArray[start] + " and " + intArray[end]);
+                sumCounter++;
+                start++;
+            } else if (currentSum < sum) {
+                start++;
+            } else if (currentSum > sum) {
+                end--;
+            }
+        }
+
+        if (sumCounter == 0) {
+            System.out.println("No sum found for value " + sum);
+        } else {
+            System.out.println("Sums found: " + sumCounter);
+        }
 
     }
 
+    static void hashSumCheck(int[] intArray, int sum) { //O(n) 
+
+
+    }
 
     public static void main(String[] args) {
 
         int[] numbers = {3, 7, 14, 28, 2, 31, 5};
 
+
+        System.out.println("Using brute force:");
+
         Data.bruteSumCheck(numbers, 20);
         Data.bruteSumCheck(numbers, 33);
+
+        System.out.println("Using sorting:");
+
+        Data.sortSumCheck(numbers, 20);
+        Data.sortSumCheck(numbers, 33);
+        Data.sortSumCheck(numbers, 8);
+
+        System.out.println("Using a HashTable:");
+
+        Data.hashSumCheck(numbers, 20);
+        Data.hashSumCheck(numbers, 33);
 
 
 
