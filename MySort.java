@@ -1,4 +1,6 @@
-public class Sort {
+import java.util.*;
+
+public class MySort {
     // https://www.techiedelight.com/bubble-sort-iterative-recursive/
     // https://www.techiedelight.com/selection-sort-iterative-recursive/
     // https://www.techiedelight.com/insertion-sort-iterative-recursive/
@@ -14,15 +16,16 @@ public class Sort {
     // https://www.programiz.com/java-programming/algorithms
 
 
-
-
-
-
     public static void main(String[] args) {
 
+        int[] sorte = {33, 11, 4, 76, 9, 12, 80, 54, 41, 38, 22, 19, 2, 47};
 
+        Arrays.sort(sorte);
 
-
+        for(int i: sorte) {
+            System.out.println(i);
+        }
+        
         
     }
 }

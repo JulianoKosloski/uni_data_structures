@@ -1,4 +1,7 @@
-public class Search {
+import java.util.*;
+
+
+public class MySearch {
     // https://www.techiedelight.com/binary-search/
     // https://www.techiedelight.com/interpolation-search/
     // https://www.techiedelight.com/exponential-search/
@@ -10,6 +13,7 @@ public class Search {
     public static void main(String[] args) {
 
 
+        System.out.println("Cade?");
 
 
     }
