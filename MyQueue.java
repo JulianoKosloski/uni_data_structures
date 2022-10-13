@@ -37,10 +37,5 @@ public class MyQueue {
         while (loop.hasNext()) { 
             System.out.println(loop.next() + " aaaaaaaaaaaAaaAaaAAaaaA");
         }
-
-        
-
-
-
     }
 }
