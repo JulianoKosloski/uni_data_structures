@@ -106,7 +106,7 @@ public class Data{
         // Data.sortSumCheck(numbers, 33);
         // Data.sortSumCheck(numbers, 8);
 
-        // System.out.println("Using a HashMap:"); 
+        // System.out.println("Using HashMap:"); 
 
         // Data.hashSumCheck(numbers, 20);
         // Data.hashSumCheck(numbers, 33);
