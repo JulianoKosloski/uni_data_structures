@@ -32,7 +32,7 @@ public class MyQueue {
             System.out.println("O bicho nao ta aqui ");
         }
 
-        Iterator loop = fila.iterator();
+        Iterator<String> loop = fila.iterator();
 
         while (loop.hasNext()) { 
             System.out.println(loop.next() + " aaaaaaaaaaaAaaAaaAAaaaA");

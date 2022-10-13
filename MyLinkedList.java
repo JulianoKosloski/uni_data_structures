@@ -20,9 +20,16 @@ public class MyLinkedList {
 
         System.out.println("Lista da festa:" + listaVIP);
 
+        listaVIP.add(2, "Macaco Louco");
+        System.out.println("Lista da festa:" + listaVIP);
+        listaVIP.set(3, "Hyoga");
+        System.out.println("Lista da festa:" + listaVIP);
         listaVIP.removeFirst();
+        System.out.println("Lista da festa:" + listaVIP);
         listaVIP.removeLast();
 
         System.out.println("Lista atualizada" + listaVIP);
+
+        System.out.println(listaVIP.get(0) + " eh o primeiro/a da fila/lista");
     }
 }
