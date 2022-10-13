@@ -15,6 +15,10 @@ public class MySearch {
 
         System.out.println("Cade?");
 
+        ArrayList<String> b = new ArrayList<String>();
+
+        System.out.println(b);
+
 
     }
 }
