@@ -1,5 +1,5 @@
 import java.util.Hashtable; //synchronized, doesn't allow null values
-import java.util.HashMap; //asynchronized, allows one null key and several null values --> generally preferred
+// import java.util.HashMap; //asynchronized, allows one null key and several null values --> generally preferred
 import java.util.*;
 
 public class Hash {
