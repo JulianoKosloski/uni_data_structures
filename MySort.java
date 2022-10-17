@@ -133,31 +133,120 @@ public class MySort {
 
     //-----------------QUICKSORT------------------- // basically the best, but sometimes heap sort wins over it
 
-    static void quickSort(int[] args) {
+    static int partition(int[] array, int begin, int end) {
+        int pivot = end;
 
+        int counter = begin;
+        for (int i = begin; i < end; i++) {
+            if (array[i] < array[pivot]) {
+                int temp = array[counter];
+                array[counter] = array[i];
+                array[i] = temp;
+                counter++;
+            }
+        }
+        int temp = array[pivot];
+        array[pivot] = array[counter];
+        array[counter] = temp;
+    
+        return counter;
+    }
 
+    static void quickSort(int[] array, int begin, int end) {
 
+        if (end <= begin) { //stopping condition
+            return;
+        }
 
+        int pivot = partition(array, begin, end);
+        quickSort(array, begin, pivot-1);
+        quickSort(array, pivot+1, end);
 
         System.out.println("Array sorted with divide and conquer/quick!");
     }
 
+    // TESTING RECURSION
+
+    static long factorial(int n){
+
+        if (n < 0) { //stopping condition
+            return 0;
+        } else if (n > 20) {
+            System.out.println("Numero muito grande! ---- " + n);
+            return 0;
+        }
+
+        long result = n * fac(n-1);
+
+        System.out.println("O resultado do fatorial de " + n + ": " + result);
+        return result;
+    }
+
+    static long fac(int n) {
+
+        long result;
+    
+        if (n == 0) {
+            result = 1;
+            return result;
+        } 
+
+        result = n * fac(n-1); 
+
+        return result;
+    }
+
+    static void printFibonacci(int n) {
+        
+        //where n is the number of entries in the fibonacci series
+        if (n <= 2) {
+            System.out.println("Not a valid position!");
+            return;
+        }
+
+        n = n-3;
+
+        System.out.println(1);
+        System.out.println(1);
+
+        fibo(1, 1, n);
+
+        System.out.println("Sequence ended with " + (n + 3) + " entries!");
+
+    }
+
+    static void fibo(int previous, int current, int entries) {
+
+        if(entries < 0) {
+            return;
+        }
+
+        entries--;
+        int next;
+        next = previous + current;
+        previous = current;
+        current = next;
+
+        System.out.println(next);
+
+        fibo(previous, current, entries);
+    }
+
     public static void main(String[] args) {
 
-        int[] sorte = {33, 11, 4, 76, 9, 12, 80, 54, 41, 38, 22, 19, 2, 47};
+        int[] sorte = {1, 3, 5, 11};
 
         // Arrays.sort(sorte); //the std method uses quicksort
 
         // bubbleSort(sorte);
         // insertionSort(sorte);
         // selectionSort(sorte);
-        mergeSort(sorte, 0 , sorte.length-1);
+        // mergeSort(sorte, 0 , sorte.length-1);
         // quickSort(sorte);
 
-        for(int i: sorte) {
-            System.out.println(i);
-        }
-        
+        int seq = 20;
+        printFibonacci(seq);
+
 
     }
 }
