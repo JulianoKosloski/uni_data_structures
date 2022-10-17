@@ -9,6 +9,8 @@ public class Hash {
     // get, put, and contains() method are all O(1) in general, so changing something into a hash map or table can speed up
     // processing, such as in the example at Data.java
 
+    // this is my comment
+
 
     public static void main(String[] args) {
 
