@@ -5,7 +5,7 @@ A) (2 4 6 8 12 16) e (2 6 8 4 16 12).
 B) (12 4 2 8 6 16) e (2 4 6 8 12 16). 
 C) (2 6 8 4 16 12) e (12 4 2 8 6 16). 
 D) (2 4 6 8 12 16) e (12 4 2 8 6 16). 
-E) (12 4 2 8 6 16) e (2 6 8 4 16 12). 
+E) (12 4 2 8 6 16) e (2 6 8 4 16 12). XXXXXXXXX
 
    
 [POSCOMP 2015 – COPS – UEL] Sobre árvores binárias, considere as afirmativas a seguir
@@ -15,7 +15,7 @@ III. Uma dada árvore binária de busca A armazena números inteiros e nela fora
 IV. Uma dada árvore binária de busca A armazena números inteiros e nela foram inseridos 936 valores não repetidos. Supondo que r seja o nó raiz da árvore A e que sua subárvore esquerda contenha 460 elementos e sua subárvore direita possua 475 elementos. Para determinar se um número x pertence a essa árvore, serão feitas, no máximo, 476 comparações. 
 Assinale a alternativa correta.
 a) Somente as afirmativas I e II são corretas.
-b) Somente as afirmativas I e IV são corretas.
+b) Somente as afirmativas I e IV são corretas. XXXXXX I got it right, precisa assumir uma arvore balanceada para fazer apenas 10 comparações
 c) Somente as afirmativas III e IV são corretas.
 d) Somente as afirmativas I, II e III são corretas.
 e) Somente as afirmativas II, III e IV são corretas. 
@@ -25,7 +25,7 @@ e) Somente as afirmativas II, III e IV são corretas.
 Assinale a alternativa que apresenta, corretamente, a sequência de inserção que gera essa ABB. 
 a) 30, 15, 40, 10, 20, 60, 80
 b) 30, 15, 40, 10, 20, 80, 60
-c) 30, 15, 60, 10, 20, 40, 80
+c) 30, 15, 60, 10, 20, 40, 80 XXXX
 d) 30, 60, 20, 80, 15, 10, 40
 e) 30, 60, 40, 10, 20, 15, 80 
 
@@ -47,4 +47,4 @@ Simule as seguintes operações na pilha:
 - Remova
 - Insira "João"
 
-Qual o estado atual da pilha?
+Qual o estado atual da pilha? mauricio, guilherme, joão (de baixo para cima) XXXX

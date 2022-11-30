@@ -16,7 +16,7 @@ public class BinaryTree {
         this.root = null;
     }
 
-    void printInOrder(Node node) {
+    void printInOrder(Node node) { //gives nodes in non-decreasing order, another version can be used to reverse it
 
         if (node == null) {
             return;
@@ -35,7 +35,7 @@ public class BinaryTree {
         printInOrder(this.root); 
     }
 
-    void printPreOrder(Node node) {
+    void printPreOrder(Node node) { //normally used to copy a tree from the root
         if (node == null) {
             return;
         }
@@ -51,7 +51,7 @@ public class BinaryTree {
         printPreOrder(this.root);
     }
 
-    void printPostOrder(Node node) {
+    void printPostOrder(Node node) { //normally used to delete every single node of a tree
 
         if (node == null) {
             return;
