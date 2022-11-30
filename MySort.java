@@ -238,10 +238,10 @@ public class MySort {
 
         // Arrays.sort(sorte); //the std method uses quicksort
 
-        // bubbleSort(sorte);
-        // insertionSort(sorte);
-        // selectionSort(sorte);
-        // mergeSort(sorte, 0 , sorte.length-1);
+        bubbleSort(sorte);
+        insertionSort(sorte);
+        selectionSort(sorte);
+        mergeSort(sorte, 0 , sorte.length-1);
         // quickSort(sorte);
 
         int seq = 20;

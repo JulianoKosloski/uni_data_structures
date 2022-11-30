@@ -30,12 +30,47 @@ public class BinaryTree {
 
     }
 
-    // Wrappers over above recursive functions
+    // Wrappers over above recursive function
     void printInOrder() { 
-        printInOrder(root); 
+        printInOrder(this.root); 
+    }
+
+    void printPreOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        System.out.print(node.key + " ");
+
+        printPreOrder(node.left); //recursion on the left
+
+        printPreOrder(node.right); //recursion on the right
+    }
+
+    void printPreOrder() { 
+        printPreOrder(this.root);
+    }
+
+    void printPostOrder(Node node) {
+
+        if (node == null) {
+            return;
+        }
+
+
+        printPostOrder(node.left);
+
+        printPostOrder(node.right);
+
+        System.out.print(node.key + " ");
+    }
+
+    void printPostOrder() { 
+        printPostOrder(this.root);
     }
 
     public static void main(String[] args) {
+
         BinaryTree tree = new BinaryTree();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
@@ -47,6 +82,12 @@ public class BinaryTree {
 
         System.out.println("InOrder traversal of binary tree: ");
         tree.printInOrder();
+
+        System.out.println("\nPreOrder traversal of binary tree: ");
+        tree.printPreOrder();
+
+        System.out.println("\nPostOrder traversal of binary tree: ");
+        tree.printPostOrder();
     }
 
 }
